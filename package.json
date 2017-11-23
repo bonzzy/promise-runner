@@ -8,6 +8,7 @@
   },
   "author": "Tomislav Fabeta",
   "license": "ISC",
+  "repository": "https://github.com/bonzzy/promise-runner",
   "dependencies": {
     "@types/node": "^8.0.53",
     "chai": "^4.1.2",
