@@ -1,4 +1,4 @@
-const {PromiseRunner} = require("promise-array-runner");
+const {PromiseArrayRunner} = require("promise-array-runner");
 
 let methodOne = (startingObj) => {
     startingObj.a = 1;
@@ -11,6 +11,6 @@ let arrayOfMethods = [
     methodOne
 ];
 
-PromiseRunner.run(arrayOfMethods, {}).then( (resultObj) => {
+PromiseArrayRunner.run(arrayOfMethods, {}).then( (resultObj) => {
     console.log(resultObj);
 });
