@@ -1,5 +1,5 @@
 **Promise Array runner**
-
+======
 `let arrayOfMethods = [
  			methodOne,
  			methodTwo
@@ -17,3 +17,5 @@
   		resolve(startingObj);
   	});`
   };
+  
+  [Link to example](https://runkit.com/bonzzy/runkit-npm-promise-array-runner)
