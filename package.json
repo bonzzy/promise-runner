@@ -1,13 +1,12 @@
 {
-  "name": "serverv2",
+  "name": "promise-array-runner",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Promise runner helpes create promise chains from array of methods",
+  "main": "./built/PromiseRunner.js",
   "scripts": {
-    "test": "istanbul cover ./node_modules/.bin/_mocha -- --recursive",
-    "coverage": ""
+    "test": "istanbul cover ./node_modules/.bin/_mocha -- --recursive"
   },
-  "author": "",
+  "author": "Tomislav Fabeta",
   "license": "ISC",
   "dependencies": {
     "@types/node": "^8.0.53",
