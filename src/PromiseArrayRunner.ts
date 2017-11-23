@@ -1,4 +1,4 @@
-export class PromiseRunner {
+export class PromiseArrayRunner {
     static errMessage = 'Parameter promiseMethods is empty array';
     /**
      *
@@ -9,7 +9,7 @@ export class PromiseRunner {
     static run( promiseMethods: { ({}): Promise<any>; } [], startingObj: {}): Promise<any> {
         if (promiseMethods.length === 0) {
             return new Promise((resolve, reject)=>{
-                reject(PromiseRunner.errMessage)
+                reject(PromiseArrayRunner.errMessage)
             });
         }
         return _runMethods(promiseMethods, startingObj);

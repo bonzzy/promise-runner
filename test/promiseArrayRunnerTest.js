@@ -1,4 +1,4 @@
-const {PromiseRunner} = require('../built/PromiseRunner');
+const {PromiseArrayRunner} = require('../built/PromiseArrayRunner');
 const {expect} = require('chai');
 
 let startingObj = {a:0};
@@ -33,8 +33,8 @@ describe( 'Testing promise runner helper', () => {
 		let arrayOfMethods = [
 		];
 
-		return PromiseRunner.run(arrayOfMethods, startingObj).catch((err) => {
-			expect(err).to.equals(PromiseRunner.errMessage);
+		return PromiseArrayRunner.run(arrayOfMethods, startingObj).catch((err) => {
+			expect(err).to.equals(PromiseArrayRunner.errMessage);
 		});
 	});
 
@@ -43,7 +43,7 @@ describe( 'Testing promise runner helper', () => {
 			methodOne
 		];
 
-		return PromiseRunner.run(arrayOfMethods, startingObj).then( (resultObj) => {
+		return PromiseArrayRunner.run(arrayOfMethods, startingObj).then( (resultObj) => {
 			expect(resultObj).to.not.equal(undefined);
 			expect(resultObj).to.have.property('a').to.equals(1);
 		});
@@ -55,7 +55,7 @@ describe( 'Testing promise runner helper', () => {
 			methodTwo
 		];
 
-		let promise = PromiseRunner.run(arrayOfMethods, startingObj);
+		let promise = PromiseArrayRunner.run(arrayOfMethods, startingObj);
 
 		return promise.then((resultObj) => {
 			expect(resultObj).to.not.equal(undefined);
@@ -71,7 +71,7 @@ describe( 'Testing promise runner helper', () => {
 			methodThree
 		];
 
-		return PromiseRunner.run(arrayOfMethods, startingObj).then( (resultObj) => {
+		return PromiseArrayRunner.run(arrayOfMethods, startingObj).then( (resultObj) => {
 			expect(resultObj).to.not.equal(undefined);
 			expect(resultObj).to.have.property('a').to.equals(0);
 			expect(resultObj).to.have.property('b').to.equals(1);
