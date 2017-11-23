@@ -1,6 +1,6 @@
 {
   "name": "promise-array-runner",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Promise runner helpes create promise chains from array of methods",
   "main": "./built/PromiseRunner.js",
   "scripts": {
