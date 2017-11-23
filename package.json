@@ -1,0 +1,17 @@
+{
+  "name": "serverv2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "istanbul cover ./node_modules/.bin/_mocha -- --recursive",
+    "coverage": ""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^8.0.53",
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1"
+  }
+}
