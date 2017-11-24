@@ -7,19 +7,15 @@ class PromiseArrayRunner {
                 reject(PromiseArrayRunner.errMessage);
             });
         }
-        return _runMethods(promiseMethods, startingObj);
+        let returnPromise = promiseMethods[0](startingObj);
+        for (let i = 1; i < promiseMethods.length; i++) {
+            returnPromise = returnPromise.then((resultObj) => {
+                return promiseMethods[i](resultObj);
+            });
+        }
+        return returnPromise;
     }
 }
 PromiseArrayRunner.errMessage = 'Parameter promiseMethods is empty array';
 exports.PromiseArrayRunner = PromiseArrayRunner;
-function _runMethods(promiseMethods, params, currentIndex = 0) {
-    return promiseMethods[currentIndex](params).then((params) => {
-        if (currentIndex < promiseMethods.length - 1) {
-            return _runMethods(promiseMethods, params, currentIndex + 1);
-        }
-        return new Promise((resolve, reject) => {
-            resolve(params);
-        });
-    });
-}
 //# sourceMappingURL=PromiseArrayRunner.js.map
