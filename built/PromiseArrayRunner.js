@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.PromiseArrayRunner = void 0;
 class PromiseArrayRunner {
     static run(promiseMethods, startingObj) {
         if (promiseMethods.length === 0) {
@@ -16,6 +17,6 @@ class PromiseArrayRunner {
         return returnPromise;
     }
 }
-PromiseArrayRunner.errMessage = 'Parameter promiseMethods is empty array';
 exports.PromiseArrayRunner = PromiseArrayRunner;
+PromiseArrayRunner.errMessage = 'Parameter promiseMethods is empty array';
 //# sourceMappingURL=PromiseArrayRunner.js.map
